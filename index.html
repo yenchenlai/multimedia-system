@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>臺灣國家公園介紹 - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="臺灣國家公園" name="description">
+  <meta content="臺灣,臺灣國家公園,國家公園" name="keywords">
 
   <script src="https://kit.fontawesome.com/2706583dde.js" crossorigin="anonymous"></script>
 
@@ -36,6 +36,27 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script>document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll(".lazyload");
+
+  if ("IntersectionObserver" in window) {
+    var lazyloadObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var lazyloadImage = entry.target;
+          lazyloadImage.src = lazyloadImage.dataset.src;
+          lazyloadImage.classList.remove("lazyload");
+          lazyloadObserver.unobserve(lazyloadImage);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(lazyloadImage) {
+      lazyloadObserver.observe(lazyloadImage);
+    });
+  }
+});
+  </script>
 </head>
 
 <body>
@@ -82,9 +103,12 @@
         </div>
 
         <div class="row">
+          <!-- 左側 col-lg-4 -->
           <div class="col-lg-4">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img data-src="assets/img/profile-img.jpg" class="img-fluid lazyload" alt="">
           </div>
+
+
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>簡介 &amp; 歷史</h3>
             
@@ -134,9 +158,11 @@
         </div>
 
         <div class="row">
+          <!-- 左側 col-lg-4 -->
           <div class="col-lg-4">
-            <img src="assets/img/profile-img1.jpg" class="img-fluid" alt="">
+            <img data-src="assets/img/profile-img1.jpg" class="img-fluid lazyload" alt="">
           </div>
+
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>簡介 &amp; 歷史</h3>
             <div class="row">
@@ -183,9 +209,11 @@
         </div>
 
         <div class="row">
+          <!-- 左側 col-lg-4 -->
           <div class="col-lg-4">
-            <img src="assets/img/profile-img2.jpg" class="img-fluid" alt="">
+            <img data-src="assets/img/profile-img2.jpg" class="img-fluid lazyload" alt="">
           </div>
+
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>簡介 &amp; 歷史</h3>
             <div class="row">
@@ -228,9 +256,11 @@
         </div>
 
         <div class="row">
+          <!-- 左側 col-lg-4 -->
           <div class="col-lg-4">
-            <img src="assets/img/profile-img3.jpg" class="img-fluid" alt="">
+            <img data-src="assets/img/profile-img3.jpg" class="img-fluid lazyload" alt="">
           </div>
+
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>簡介 &amp; 歷史</h3>
             <div class="row">
@@ -274,9 +304,11 @@
         </div>
 
         <div class="row">
+          <!-- 左側 col-lg-4 -->
           <div class="col-lg-4">
-            <img src="assets/img/profile-img4.jpg" class="img-fluid" alt="">
+            <img data-src="assets/img/profile-img4.jpg" class="img-fluid lazyload" alt="">
           </div>
+
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>簡介 &amp; 歷史</h3>
             <div class="row">
@@ -320,9 +352,11 @@
         </div>
 
         <div class="row">
+          <!-- 左側 col-lg-4 -->
           <div class="col-lg-4">
-            <img src="assets/img/profile-img5.jpg" class="img-fluid" alt="">
+            <img data-src="assets/img/profile-img5.jpg" class="img-fluid lazyload" alt="">
           </div>
+
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>簡介 &amp; 歷史</h3>
             <div class="row">
@@ -366,7 +400,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<!--  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>-->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -374,7 +408,10 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+
+<!--  <script src="assets/vendor/php-email-form/validate.js"></script>-->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
